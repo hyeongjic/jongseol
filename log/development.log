@@ -1,0 +1,843 @@
+  [1m[35m (103.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
+  [1m[35m (71.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (401.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (65.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (131.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'asbd@gasva.cpm' LIMIT 1[0m
+  [1m[35m (1651.9ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (368.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/test" for 127.0.0.1 at 2017-12-07 20:29:17 +0900
+  [1m[35m (53.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (28.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 80ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-07 20:29:18 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (460.0ms)
+Completed 500 Internal Server Error in 685ms (ActiveRecord: 114.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00005610ba716af8>:0x00005610ba6d7498>):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true %>
+  
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___3370918816712696062_47314923371300'
+Started GET "/test" for 127.0.0.1 at 2017-12-07 20:42:39 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-07 20:42:39 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (429.5ms)
+Completed 500 Internal Server Error in 692ms (ActiveRecord: 199.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007fe3fd31d100>:0x00007fe3fd41f0f8>):
+    1: <!--<h2>Log in</h2>-->
+    2: 
+    3: <!--<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>-->
+    4:   <!--<div class="field">-->
+    5:     <%= f.label :email %><br />
+    6:     <!--<%= f.email_field :email, autofocus: true %>-->
+  
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___3370918816712696062_70308591627820'
+Started GET "/test" for 127.0.0.1 at 2017-12-07 20:43:19 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-07 20:43:19 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (0.3ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/test" for 127.0.0.1 at 2017-12-07 20:48:37 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-07 20:48:37 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (393.2ms)
+Completed 500 Internal Server Error in 490ms (ActiveRecord: 59.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007fe3fc7be2a0>:0x00007fe3fc773f70>):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true %>
+  
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___3370918816712696062_70308584985900'
+Started GET "/test" for 127.0.0.1 at 2017-12-07 20:50:35 +0900
+  [1m[35m (131.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (166.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 55ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-07 20:50:40 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (482.2ms)
+Completed 500 Internal Server Error in 1258ms (ActiveRecord: 570.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007f08f0b79ee0>:0x00007f08f0b86ca8>):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true %>
+  
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb__693152052269813134_69838187546160'
+Started GET "/test" for 127.0.0.1 at 2017-12-07 20:51:29 +0900
+  [1m[35m (45.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (34.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 30ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-07 20:51:31 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (442.3ms)
+Completed 500 Internal Server Error in 738ms (ActiveRecord: 129.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007f62309792a0>:0x00007f6230987788>):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true %>
+  
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___3771146976282293496_70029849233060'
+Started GET "/signin" for 127.0.0.1 at 2017-12-07 20:51:55 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 20:52:08 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2017-12-07 20:52:20 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/test" for 127.0.0.1 at 2017-12-07 20:53:40 +0900
+  [1m[35m (189.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (193.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 25ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-07 20:53:42 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (452.6ms)
+Completed 500 Internal Server Error in 1234ms (ActiveRecord: 635.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x0000557ca1a63c90>:0x0000557ca19be4c0>):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true %>
+  
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___1710020288079065873_46996884181900'
+Started GET "/test" for 127.0.0.1 at 2017-12-07 20:53:50 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-07 20:53:50 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (455.4ms)
+Completed 500 Internal Server Error in 459ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x0000557ca1a63c90>:0x00007fe60c2d5ba0>):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true %>
+  
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___1710020288079065873_70313011699080'
+Started GET "/pushpush" for 127.0.0.1 at 2017-12-09 14:45:11 +0900
+  
+Mysql2::Error (Unknown MySQL server host 'aa1gla82a4xmaxx.cpkusoqxhdw6.ap-northeast-2.rds.amazonaws.com' (110)):
+  
+mysql2 (0.4.10) lib/mysql2/client.rb:89:in `connect'
+mysql2 (0.4.10) lib/mysql2/client.rb:89:in `initialize'
+activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `new'
+activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `mysql2_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pushpush" for 127.0.0.1 at 2017-12-09 14:47:05 +0900
+  [1m[35m (137.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (35.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/pushpush"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 14:47:33 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 127ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 14:47:34 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (463.8ms)
+Completed 500 Internal Server Error in 673ms (ActiveRecord: 102.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007f0f68f437c8>:0x00007f0f68f41770>):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true %>
+  
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___854712920155039578_69852081029480'
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 14:52:47 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 66ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 14:52:48 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 1.9ms | ActiveRecord: 37.1ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 15:01:33 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 72ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 15:01:34 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (0.7ms)
+Completed 200 OK in 101ms (Views: 11.2ms | ActiveRecord: 39.1ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:07:05 +0900
+  [1m[35m (11.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (10.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 55ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 16:07:06 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (2.5ms)
+Completed 200 OK in 133ms (Views: 37.7ms | ActiveRecord: 35.7ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:07:44 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 16:07:44 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (0.4ms)
+Completed 200 OK in 74ms (Views: 1.5ms | ActiveRecord: 38.8ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:07:47 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 16:07:47 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (0.4ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:09:10 +0900
+  
+SyntaxError (/home/khj/workspace/userver/studying_Server/app/controllers/push_controller.rb:19: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+    }registration_ids=["ALL"]
+                     ^):
+  
+app/controllers/push_controller.rb:19: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:09:24 +0900
+  
+SyntaxError (/home/khj/workspace/userver/studying_Server/app/controllers/push_controller.rb:19: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+    }registration_ids=["All"]
+                     ^):
+  
+app/controllers/push_controller.rb:19: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:09:34 +0900
+  
+SyntaxError (/home/khj/workspace/userver/studying_Server/app/controllers/push_controller.rb:19: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+    }registration_ids=["1","2"]
+                     ^):
+  
+app/controllers/push_controller.rb:19: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:10:03 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 16:10:03 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (0.3ms)
+Completed 200 OK in 62ms (Views: 1.5ms | ActiveRecord: 32.8ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:12:15 +0900
+  [1m[35m (12.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (13.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 21ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 16:12:16 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (1.6ms)
+Completed 200 OK in 97ms (Views: 8.0ms | ActiveRecord: 35.3ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:12:36 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 16:12:36 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (0.4ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:14:59 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 16:14:59 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (0.4ms)
+Completed 200 OK in 80ms (Views: 2.1ms | ActiveRecord: 41.0ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:36:13 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 16:36:13 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (0.5ms)
+Completed 200 OK in 87ms (Views: 2.6ms | ActiveRecord: 36.7ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:36:33 +0900
+  [1m[35m (13.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (32.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 25ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 16:36:34 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (1.1ms)
+Completed 200 OK in 112ms (Views: 4.0ms | ActiveRecord: 72.5ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:49:35 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 16:49:35 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (0.5ms)
+Completed 200 OK in 83ms (Views: 2.8ms | ActiveRecord: 39.6ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:50:21 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 16:50:21 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering /home/khj/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/devise-i18n-1.4.0/app/views/devise/sessions/new.html.erb
+  Rendered /home/khj/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/devise-i18n-1.4.0/app/views/devise/sessions/new.html.erb (421.5ms)
+Completed 500 Internal Server Error in 468ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007f5660285678>:0x00007f56640389e8>):
+    1: <h2><%= t('.sign_in') %></h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true  %>
+  
+actionview (5.1.4) lib/action_view/helpers/url_helper.rb:597:in `token_tag'
+actionview (5.1.4) lib/action_view/helpers/form_tag_helper.rb:855:in `extra_tags_for_form'
+actionview (5.1.4) lib/action_view/helpers/form_tag_helper.rb:875:in `form_tag_html'
+actionview (5.1.4) lib/action_view/helpers/form_tag_helper.rb:880:in `form_tag_with_body'
+actionview (5.1.4) lib/action_view/helpers/form_helper.rb:454:in `form_for'
+devise-i18n (1.4.0) app/views/devise/sessions/new.html.erb:3:in `__home_khj__rbenv_versions_______lib_ruby_gems_______gems_devise_i__n_______app_views_devise_sessions_new_html_erb__1329710934016820047_70004510957020'
+actionview (5.1.4) lib/action_view/template.rb:157:in `block in render'
+activesupport (5.1.4) lib/active_support/notifications.rb:168:in `instrument'
+actionview (5.1.4) lib/action_view/template.rb:352:in `instrument_render_template'
+actionview (5.1.4) lib/action_view/template.rb:155:in `render'
+actionview (5.1.4) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+actionview (5.1.4) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.1.4) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.1.4) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+actionview (5.1.4) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+actionview (5.1.4) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+actionview (5.1.4) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.1.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.1.4) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.1.4) lib/action_view/rendering.rb:103:in `_render_template'
+actionview (5.1.4) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.1.4) lib/action_controller/api/api_rendering.rb:11:in `render_to_body'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.1.4) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+actionpack (5.1.4) lib/abstract_controller/rendering.rb:24:in `render'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.1.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/khj/.rbenv/versions/2.4.2/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+activesupport (5.1.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+responders (2.4.0) lib/action_controller/responder.rb:238:in `default_render'
+responders (2.4.0) lib/action_controller/responder.rb:170:in `to_html'
+responders (2.4.0) lib/action_controller/responder.rb:163:in `respond'
+responders (2.4.0) lib/action_controller/responder.rb:156:in `call'
+responders (2.4.0) lib/action_controller/respond_with.rb:211:in `respond_with'
+devise (4.3.0) app/controllers/devise/sessions_controller.rb:12:in `new'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:54:24 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 28ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 16:54:24 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (0.5ms)
+Completed 200 OK in 88ms (Views: 2.3ms | ActiveRecord: 37.5ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:56:55 +0900
+  
+SyntaxError (/home/khj/workspace/userver/studying_Server/app/controllers/push_controller.rb:71: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/push_controller.rb:71: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:58:40 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 16:58:40 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 1.7ms | ActiveRecord: 36.6ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 16:59:00 +0900
+Processing by PushController#push_and as */*
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-09 16:59:00 +0900
+Processing by Devise::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb
+  Rendered devise/sessions/new.html.erb (0.4ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 17:02:05 +0900
+Processing by PushController#push_and as */*
+Completed 200 OK in 568ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 17:02:59 +0900
+Processing by PushController#push_and as */*
+Completed 200 OK in 276ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 17:50:01 +0900
+Processing by PushController#push_and as */*
+Completed 200 OK in 481ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 21:48:24 +0900
+  [1m[35m (17.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (17.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PushController#push_and as */*
+  [1m[36mUser Load (10.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+Completed 200 OK in 620ms (Views: 1.0ms | ActiveRecord: 46.9ms)
+
+
+  [1m[35m (17.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (21.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
+  [1m[35m (19.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (69.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'khj3753@gmail.com' LIMIT 1[0m
+  [1m[35m (18.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (16.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (10.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'khj3753@gmail.com' LIMIT 1[0m
+  [1m[35m (9.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (84.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (19.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'khj3753@gmail.com' LIMIT 1[0m
+  [1m[35m (34.9ms)[0m  [1m[31mROLLBACK[0m
+Started POST "/users/sign_up" for 127.0.0.1 at 2017-12-09 22:03:53 +0900
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"khj3753@gmail.com", "encrypted_password"=>"[FILTERED]", "encrypted_password_confirmation"=>"[FILTERED]", "device_uuid"=>"123456789"}
+  [1m[35m (27.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (25.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'khj3753@gmail.com' LIMIT 1[0m
+  [1m[35m (47.9ms)[0m  [1m[31mROLLBACK[0m
+Completed 400 Bad Request in 1319ms (Views: 0.4ms | ActiveRecord: 100.6ms)
+
+
+Started POST "/users/sign_up" for 127.0.0.1 at 2017-12-09 22:43:02 +0900
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"khj3753@gmail.com", "encrypted_password"=>"[FILTERED]", "encrypted_password_confirmation"=>"[FILTERED]", "device_uuid"=>"123456789"}
+  [1m[35m (15.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (13.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'khj3753@gmail.com' LIMIT 1[0m
+  [1m[35m (13.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 400 Bad Request in 380ms (Views: 0.2ms | ActiveRecord: 93.0ms)
+
+
+Started POST "/users/sign_up" for 127.0.0.1 at 2017-12-09 22:43:35 +0900
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"khj3753@gmail.com", "encrypted_password"=>"[FILTERED]", "encrypted_password_confirmation"=>"[FILTERED]", "device_uuid"=>"123456789"}
+  [1m[35m (12.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (14.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'khj3753@gmail.com' LIMIT 1[0m
+  [1m[35m (13.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 400 Bad Request in 323ms (Views: 0.5ms | ActiveRecord: 84.1ms)
+
+
+Started POST "/users/sign_up" for 127.0.0.1 at 2017-12-09 22:43:53 +0900
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"khj3753@gmail.com", "encrypted_password"=>"[FILTERED]", "encrypted_password_confirmation"=>"[FILTERED]", "device_uuid"=>"123456789"}
+  [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (13.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'khj3753@gmail.com' LIMIT 1[0m
+  [1m[35m (25.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` WHERE `users`.`authentication_token` = 'VxR39m_n2LQwXF2WnBzd'[0m
+  [1m[35mSQL (26.7ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `device_uuid`, `created_at`, `updated_at`, `authentication_token`) VALUES ('khj3753@gmail.com', '$2a$11$sLhVftdQMR5lu8pYPFTkluXoLxOZenVrCVDVwFXC6S1A4nwNWfWYi', '123456789', '2017-12-09 13:43:54', '2017-12-09 13:43:54', 'VxR39m_n2LQwXF2WnBzd')[0m
+  [1m[35m (17.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 277ms (Views: 0.4ms | ActiveRecord: 99.9ms)
+
+
+  [1m[36mUser Load (13.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 22:57:28 +0900
+Processing by PushController#push_and as */*
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+Completed 200 OK in 1088ms (Views: 0.7ms | ActiveRecord: 61.0ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 22:57:55 +0900
+Processing by PushController#push_and as */*
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+Completed 200 OK in 461ms (Views: 0.9ms | ActiveRecord: 57.7ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 22:59:11 +0900
+Processing by PushController#push_and as */*
+  [1m[36mUser Load (13.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+Completed 200 OK in 428ms (Views: 0.8ms | ActiveRecord: 60.2ms)
+
+
+Started GET "/pushrpush" for 127.0.0.1 at 2017-12-09 22:59:43 +0900
+Processing by PushController#push_and as */*
+  [1m[36mUser Load (11.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+Completed 200 OK in 5355ms (Views: 0.9ms | ActiveRecord: 11.9ms)
+
+
+  [1m[35m (14.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (12.8ms)[0m  [1m[34mSELECT GET_LOCK(6778635641374256100, 0)[0m
+  [1m[35m (12.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddRasp (20171209160429)
+  [1m[35m (660.1ms)[0m  [1m[35mALTER TABLE `users` ADD `rasp_uuid` varchar(255) DEFAULT '' NOT NULL AFTER `device_uuid`[0m
+  [1m[35m (13.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (21.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171209160429')[0m
+  [1m[35m (19.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (18.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (17.5ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `value` = 'development', `updated_at` = '2017-12-09 16:09:21' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (15.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (11.8ms)[0m  [1m[34mSELECT RELEASE_LOCK(6778635641374256100)[0m
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/push/rasp" for 127.0.0.1 at 2017-12-11 17:25:39 +0900
+  [1m[35m (97.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (85.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PushController#push_to_rasp as */*
+  Parameters: {"email"=>"asd@asd.com", "id"=>"ifj2122"}
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
