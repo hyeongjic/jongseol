@@ -7,24 +7,19 @@ class UsersController < ApplicationController
     email = params['email']
     password = params['password']
 
+
+
     begin
-    user = User.all
+      user = User.where(email: email).take
 
-    render json: { result: user}, status: 200
+      if user.valid_password?(password)
+        render json: { result: 'Success!', email: user.email, auth_token: user.authentication_token, status: 200}, status: 200
+      else
+        render json: { result: 'Wrong password', status: 400}, status: 400
+      end
+    rescue => e
+        render json: { result: 'wrong email address', status: 400}, status: 400
     end
-
-
-    # begin
-    #   user = User.where(email: email).take
-    #
-    #   if user.valid_password?(password)
-    #     render json: { result: 'Success!', email: user.email, auth_token: user.authentication_token, status: 200}, status: 200
-    #   else
-    #     render json: { result: 'Wrong password', status: 400}, status: 400
-    #   end
-    # rescue => e
-    #     render json: { result: 'wrong email address', status: 400}, status: 400
-    # end
   end
 
   # sign_up
