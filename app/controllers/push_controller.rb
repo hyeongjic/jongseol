@@ -10,8 +10,6 @@ class PushController < ApplicationController
 
   #fcm push
   def push_to_device
-    #signal = params['signal']
-
     begin
       #fcm = FCM.new("AAAAbe1dEHY:APA91bE4Kqr7l0BEoRANj9nRLB5_oH8izl5oR_nRZE1tFulE7VjRurtFqaHne7JcvGJI8RzNaTDp0UQpQCloVfN0CJN_HRx_byQRxO1hz9r4JyzrLJseAY_nGyC4ssn1IOqupVX3AfqI")
       fcm = FCM.new("AAAAtSbtkSc:APA91bHr7lu2SUB9FpxcLHmjd9zlJkWWWDBjs9pnI_6RXGy_nhekKHGKjj0avSQuLr8lUrGG4tCkrLgi9q-n7qma-zRed7WRyUeA74DG6CHCXlSsClJl8jnGjMoJItj5Tht2d-xBmdoe")
@@ -21,51 +19,45 @@ class PushController < ApplicationController
       signal = params['signal']
 
       if signal == 'a' #a 침입감지
-        options = {
-            priority: "high",
-            collapse_key: "updated_score",
-            notification: {
-                title: "detect",
-                body: "침입이 탐지되었습니다.",
-                icon: "myicon"}
-        }
+        titles = "detect"
+        message = "침입이 탐지되었습니다."
+        pic_url = ""
       elsif signal == 'd' #d 얼굴감지
+        titles = "face"
+        message = "창문에 거수자가 탐지되었습니다."
         a = FileUploader.new
         file = open(params['file'])
         a.store!(file)
-        pic_url = "https://s3.ap-northeast-2.amazonaws.com/jongseol-test/uploads/nil_class/RackMultipart20171213-2576-112cc4e.jpg"
-        #pic_url += a.filename
-        options = {
-            priority: "high",
-            collapse_key: "updated_score",
-            notification: {
-                title: pic_url,
-                body: "창문에 거수자가 탐지되었습니다.",
-                icon: "myicon"}
-        }
+        pic_url = "https://s3.ap-northeast-2.amazonaws.com/jongseol-test/uploads/nil_class/"
+        pic_url += a.filename
+        p a.filename
+        p pic_url
       else
         render json: { result: 'wrong signal'}, status: 400
       end
+
+      options = {
+          priority: "high",
+          collapse_key: "updated_score",
+          notification: {
+              title: titles,
+              body: message},
+          data: {
+              pic:  pic_url
+          }
+      }
+
       response = fcm.send(registration_ids, options)
 
       render json: { result: 'success' }, status: 200
     rescue => e
-      render json: { result: 'fail', message: e.message }, status: e.status
+      render json: { result: 'fail', message: e.message }, status: 400
     end
   end
 
   #test
   def push_to_rasp
-    begin
-      a = FileUploader.new
-      file = open(params['file'])
-      a.store!(file)
-      p a.filename
-      b = params['signal']
-      render json: { result: 'success', signal: b}, status: 200
-    rescue => e
-      render json: { result: 'fail', message: e.message }, status: 400
-    end
+      render json: { result: 'success' }, status: 200
   end
 
   def check_rasp
@@ -86,7 +78,8 @@ class PushController < ApplicationController
 
       rasp.save
 
-      render json: { result: 'success', rasp_id: rasp.rasp_id, rasp_ip: rasp.rasp_ip }, status: 200
+      render json: { result: 'success', rasp_id: rasp.rasp_id,
+                     rasp_ip: rasp.rasp_ip }, status: 200
     rescue => e
       render json: { result: 'fail', message: e.message }, status: 400
     end

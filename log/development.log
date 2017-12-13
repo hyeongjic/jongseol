@@ -1302,3 +1302,471 @@ Completed 200 OK in 407ms (Views: 0.4ms | ActiveRecord: 311.3ms)
 
 
   [1m[36mRasp Load (70.0ms)[0m  [1m[34mSELECT  `rasps`.* FROM `rasps` LIMIT 11[0m
+  [1m[36mUser Load (61.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
+  [1m[36mRasp Load (66.7ms)[0m  [1m[34mSELECT  `rasps`.* FROM `rasps` LIMIT 11[0m
+  [1m[35m (74.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (36.9ms)[0m  [1m[32mINSERT INTO `rasps` (`rasp_id`, `rasp_ip`, `created_at`, `updated_at`) VALUES ('jin123', '1234', '2017-12-13 14:25:53', '2017-12-13 14:25:53')[0m
+  [1m[35m (57.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRasp Load (60.3ms)[0m  [1m[34mSELECT  `rasps`.* FROM `rasps` LIMIT 11[0m
+  [1m[36mUser Load (71.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
+  [1m[36mRasp Load (68.4ms)[0m  [1m[34mSELECT  `rasps`.* FROM `rasps` LIMIT 11[0m
+Started POST "/push/device" for 127.0.0.1 at 2017-12-13 23:41:39 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (56.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 713ms (Views: 0.5ms | ActiveRecord: 170.4ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-13 23:41:51 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (44.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 491ms (Views: 0.3ms | ActiveRecord: 44.9ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-13 23:42:37 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (50.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 667ms (Views: 0.3ms | ActiveRecord: 183.9ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-13 23:42:41 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (47.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 505ms (Views: 0.4ms | ActiveRecord: 47.6ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-13 23:42:59 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (58.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 557ms (Views: 0.2ms | ActiveRecord: 58.1ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-13 23:45:06 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (55.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 812ms (Views: 0.2ms | ActiveRecord: 216.6ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-13 23:45:31 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (47.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 545ms (Views: 0.3ms | ActiveRecord: 47.9ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-13 23:46:09 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (137.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 798ms (Views: 0.1ms | ActiveRecord: 137.6ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-13 23:46:58 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (49.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 699ms (Views: 0.5ms | ActiveRecord: 187.4ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-13 23:53:12 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (53.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 777ms (Views: 0.3ms | ActiveRecord: 191.4ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-13 23:56:58 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"1q2w3e4r"}
+  [1m[36mUser Load (43.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = '1q2w3e4r' LIMIT 1[0m
+Completed 200 OK in 601ms (Views: 0.3ms | ActiveRecord: 43.7ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:05:57 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:07:20 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[35m (46.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (64.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 1235ms (Views: 0.2ms | ActiveRecord: 111.7ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:07:39 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (379.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 855ms (Views: 0.4ms | ActiveRecord: 379.5ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:08:10 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (53.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 569ms (Views: 0.2ms | ActiveRecord: 53.3ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:09:11 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (49.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 710ms (Views: 0.6ms | ActiveRecord: 49.5ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:11:46 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (40.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 566ms (Views: 0.1ms | ActiveRecord: 40.0ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:11:52 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (74.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 604ms (Views: 0.2ms | ActiveRecord: 74.4ms)
+
+
+  [1m[35m (17992.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRasp Load (0.8ms)[0m  [1m[34mSELECT  `rasps`.* FROM `rasps` LIMIT 11[0m
+  [1m[36mRasp Load (1.2ms)[0m  [1m[34mSELECT  `rasps`.* FROM `rasps` LIMIT 11[0m
+  [1m[36mRasp Load (0.4ms)[0m  [1m[34mSELECT  `rasps`.* FROM `rasps` LIMIT 11[0m
+  [1m[35m (302.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (62.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
+  [1m[36mRasp Load (61.1ms)[0m  [1m[34mSELECT  `rasps`.* FROM `rasps` LIMIT 11[0m
+  [1m[35m (51.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (48.9ms)[0m  [1m[32mINSERT INTO `rasps` (`rasp_id`, `rasp_ip`, `created_at`, `updated_at`) VALUES ('abcd', '1234', '2017-12-13 15:15:25', '2017-12-13 15:15:25')[0m
+  [1m[35m (50.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRasp Load (42.9ms)[0m  [1m[34mSELECT  `rasps`.* FROM `rasps` LIMIT 11[0m
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:15:39 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (64.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 629ms (Views: 0.2ms | ActiveRecord: 64.3ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:15:47 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"abcd"}
+  [1m[36mUser Load (49.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'abcd' LIMIT 1[0m
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 49.8ms)
+
+
+  
+NoMethodError (undefined method `status' for #<NoMethodError: undefined method `device_uuid' for nil:NilClass>):
+  
+app/controllers/push_controller.rb:53:in `rescue in push_to_device'
+app/controllers/push_controller.rb:13:in `push_to_device'
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:15:54 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"abcd"}
+  [1m[36mUser Load (71.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'abcd' LIMIT 1[0m
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 71.8ms)
+
+
+  
+NoMethodError (undefined method `status' for #<NoMethodError: undefined method `device_uuid' for nil:NilClass>):
+  
+app/controllers/push_controller.rb:53:in `rescue in push_to_device'
+app/controllers/push_controller.rb:13:in `push_to_device'
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:16:10 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"abcd"}
+  [1m[36mUser Load (51.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'abcd' LIMIT 1[0m
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 51.2ms)
+
+
+  
+NoMethodError (undefined method `status' for #<NoMethodError: undefined method `device_uuid' for nil:NilClass>):
+  
+app/controllers/push_controller.rb:53:in `rescue in push_to_device'
+app/controllers/push_controller.rb:13:in `push_to_device'
+  [1m[36mUser Load (66.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:16:49 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (68.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 598ms (Views: 0.2ms | ActiveRecord: 68.8ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:23:22 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (56.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 639ms (Views: 0.2ms | ActiveRecord: 56.7ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:24:02 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (59.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 648ms (Views: 0.2ms | ActiveRecord: 59.6ms)
+
+
+  [1m[35m (314.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (402.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 1095306ms (Views: 0.2ms | ActiveRecord: 716.6ms)
+
+
+  [1m[35m (50.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (40.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:25:48 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"abcd"}
+  [1m[36mUser Load (53.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'abcd' LIMIT 1[0m
+Completed 200 OK in 625ms (Views: 0.4ms | ActiveRecord: 53.4ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:26:16 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"abcd"}
+  [1m[36mUser Load (51.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'abcd' LIMIT 1[0m
+Completed 200 OK in 589ms (Views: 0.3ms | ActiveRecord: 51.8ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:26:28 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"abcd"}
+  [1m[36mUser Load (52.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'abcd' LIMIT 1[0m
+Completed 200 OK in 604ms (Views: 0.2ms | ActiveRecord: 52.3ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:26:43 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"abcd"}
+  [1m[36mUser Load (59.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'abcd' LIMIT 1[0m
+Completed 200 OK in 591ms (Views: 0.2ms | ActiveRecord: 59.7ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:27:03 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"abcd"}
+  [1m[36mUser Load (64.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'abcd' LIMIT 1[0m
+Completed 200 OK in 565ms (Views: 0.2ms | ActiveRecord: 64.2ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:27:13 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"abcd"}
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:28:29 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"1q2w3e4r"}
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:37:05 +0900
+  [1m[35m (48.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (58.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"1q2w3e4r"}
+  [1m[36mUser Load (79.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = '1q2w3e4r' LIMIT 1[0m
+Completed 200 OK in 830ms (Views: 0.3ms | ActiveRecord: 253.6ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:37:50 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (51.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 677ms (Views: 0.4ms | ActiveRecord: 51.7ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:37:58 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"a", "did"=>"jin123"}
+  [1m[36mUser Load (40.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 500ms (Views: 0.2ms | ActiveRecord: 40.0ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:38:10 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"b", "did"=>"jin123"}
+  [1m[36mUser Load (51.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 500 Internal Server Error in 498ms (Views: 0.7ms | ActiveRecord: 51.6ms)
+
+
+  
+NoMethodError (undefined method `status' for #<AbstractController::DoubleRenderError:0x00007f6808042f50>):
+  
+app/controllers/push_controller.rb:53:in `rescue in push_to_device'
+app/controllers/push_controller.rb:13:in `push_to_device'
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:38:18 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "did"=>"jin123"}
+  [1m[36mUser Load (51.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 482ms (Views: 0.2ms | ActiveRecord: 51.6ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:38:33 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "did"=>"jin123"}
+  [1m[36mUser Load (40.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'jin123' LIMIT 1[0m
+Completed 200 OK in 518ms (Views: 0.2ms | ActiveRecord: 40.0ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:39:20 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "did"=>"1q2w3e4r"}
+  [1m[36mUser Load (46.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = '1q2w3e4r' LIMIT 1[0m
+Completed 200 OK in 526ms (Views: 0.3ms | ActiveRecord: 46.7ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:41:44 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "did"=>"1q2w3e4r"}
+  [1m[36mUser Load (47.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = '1q2w3e4r' LIMIT 1[0m
+Completed 200 OK in 630ms (Views: 0.2ms | ActiveRecord: 47.9ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:42:04 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "did"=>"1q2w3e4r"}
+  [1m[36mUser Load (85.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = '1q2w3e4r' LIMIT 1[0m
+Completed 200 OK in 537ms (Views: 0.4ms | ActiveRecord: 85.0ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:42:40 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "did"=>"1q2w3e4r"}
+  [1m[36mUser Load (40.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = '1q2w3e4r' LIMIT 1[0m
+Completed 200 OK in 503ms (Views: 0.3ms | ActiveRecord: 40.9ms)
+
+
+  [1m[35m (26234.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (43.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mRasp Load (50.9ms)[0m  [1m[34mSELECT  `rasps`.* FROM `rasps` LIMIT 11[0m
+  [1m[35m (126.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (38.9ms)[0m  [1m[32mINSERT INTO `rasps` (`rasp_id`, `rasp_ip`, `created_at`, `updated_at`) VALUES ('asdf', '12345', '2017-12-13 15:45:29', '2017-12-13 15:45:29')[0m
+  [1m[35m (82.1ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:45:41 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "did"=>"asdf"}
+  [1m[36mUser Load (57.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 636ms (Views: 0.2ms | ActiveRecord: 57.3ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:50:52 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "did"=>"asdf"}
+  [1m[36mUser Load (103.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 806ms (Views: 0.4ms | ActiveRecord: 103.8ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:51:34 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "did"=>"asdf"}
+  [1m[36mUser Load (49.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 772ms (Views: 0.4ms | ActiveRecord: 49.2ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:55:39 +0900
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:56:53 +0900
+  [1m[35m (17.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (19.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fccb03fda70 @tempfile=#<Tempfile:/tmp/RackMultipart20171214-12308-1ctlymt.png>, @original_filename="test_cat.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.png\"\r\nContent-Type: image/png\r\n">, "did"=>"asdf"}
+  [1m[36mUser Load (15.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 362ms (ActiveRecord: 72.1ms)
+
+
+  
+NoMethodError (undefined method `status' for #<NameError:0x00007fccb0560f70>):
+  
+app/controllers/push_controller.rb:53:in `rescue in push_to_device'
+app/controllers/push_controller.rb:13:in `push_to_device'
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:57:18 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x0000557fdaaf41c8 @tempfile=#<Tempfile:/tmp/RackMultipart20171214-12308-1lbew9d.png>, @original_filename="test_cat.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.png\"\r\nContent-Type: image/png\r\n">, "did"=>"asdf"}
+  [1m[36mUser Load (20.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 400 Bad Request in 312ms (Views: 0.2ms | ActiveRecord: 63.2ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:57:53 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fcca8d44488 @tempfile=#<Tempfile:/tmp/RackMultipart20171214-12308-16scmya.png>, @original_filename="test_cat.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.png\"\r\nContent-Type: image/png\r\n">, "did"=>"asdf"}
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 1119ms (Views: 0.4ms | ActiveRecord: 62.3ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:59:18 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fccb15f2208 @tempfile=#<Tempfile:/tmp/RackMultipart20171214-12308-1oo18zp.jpg>, @original_filename="test_cat.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.jpg\"\r\nContent-Type: image/jpeg\r\n">, "did"=>"asdf"}
+  [1m[36mUser Load (28.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 845ms (Views: 0.2ms | ActiveRecord: 28.8ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 00:59:32 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fccb092f048 @tempfile=#<Tempfile:/tmp/RackMultipart20171214-12308-17xmw2a.jpg>, @original_filename="test_cat.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.jpg\"\r\nContent-Type: image/jpeg\r\n">, "did"=>"asdf"}
+  [1m[36mUser Load (13.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 740ms (Views: 0.2ms | ActiveRecord: 13.1ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 01:00:02 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fccb0336bc8 @tempfile=#<Tempfile:/tmp/RackMultipart20171214-12308-1czx8of.jpg>, @original_filename="test_cat.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.jpg\"\r\nContent-Type: image/jpeg\r\n">, "did"=>"asdf"}
+  [1m[36mUser Load (22.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 978ms (Views: 0.2ms | ActiveRecord: 74.1ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 01:02:46 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x0000557fda3016a0 @tempfile=#<Tempfile:/tmp/RackMultipart20171214-12308-1ckghin.jpg>, @original_filename="test_cat.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.jpg\"\r\nContent-Type: image/jpeg\r\n">, "did"=>"asdf"}
+  [1m[36mUser Load (27.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 1143ms (Views: 0.5ms | ActiveRecord: 82.6ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 01:03:41 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fcca8f928e8 @tempfile=#<Tempfile:/tmp/RackMultipart20171214-12308-quwj7m.jpg>, @original_filename="test_cat.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.jpg\"\r\nContent-Type: image/jpeg\r\n">, "did"=>"asdf"}
+  [1m[36mUser Load (19.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 883ms (Views: 0.5ms | ActiveRecord: 67.2ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 01:05:47 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fccb0ff8f28 @tempfile=#<Tempfile:/tmp/RackMultipart20171214-12308-1e3ncsi.jpg>, @original_filename="test_cat.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.jpg\"\r\nContent-Type: image/jpeg\r\n">, "did"=>"asdf"}
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 927ms (Views: 0.3ms | ActiveRecord: 55.2ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 01:07:15 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x0000557fdaaa1c20 @tempfile=#<Tempfile:/tmp/RackMultipart20171214-12308-abqq9h.jpg>, @original_filename="test_cat.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.jpg\"\r\nContent-Type: image/jpeg\r\n">, "did"=>"asdf"}
+  [1m[36mUser Load (34.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 1241ms (Views: 0.2ms | ActiveRecord: 90.4ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 01:09:00 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fcca9db9d40 @tempfile=#<Tempfile:/tmp/RackMultipart20171214-12308-1hq9vvp.jpg>, @original_filename="test_cat.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.jpg\"\r\nContent-Type: image/jpeg\r\n">, "did"=>"asdf"}
+  [1m[36mUser Load (26.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 1004ms (Views: 0.5ms | ActiveRecord: 74.4ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 01:10:13 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fcca91578e0 @tempfile=#<Tempfile:/tmp/RackMultipart20171214-12308-85jh7y.jpg>, @original_filename="Star-Guardian-Ezreal-by-UKIori-HD-4k-Wallpaper-Background-Fan-Art-Artwork-League-of-Legends-lol.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"Star-Guardian-Ezreal-by-UKIori-HD-4k-Wallpaper-Background-Fan-Art-Artwork-League-of-Legends-lol.jpg\"\r\nContent-Type: image/jpeg\r\n">, "did"=>"asdf"}
+  [1m[36mUser Load (18.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 4339ms (Views: 0.5ms | ActiveRecord: 18.4ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 01:10:40 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fccc00310f8 @tempfile=#<Tempfile:/tmp/RackMultipart20171214-12308-1lrrjdb.jpg>, @original_filename="Star-Guardian-Ezreal-by-UKIori-HD-4k-Wallpaper-Background-Fan-Art-Artwork-League-of-Legends-lol.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"Star-Guardian-Ezreal-by-UKIori-HD-4k-Wallpaper-Background-Fan-Art-Artwork-League-of-Legends-lol.jpg\"\r\nContent-Type: image/jpeg\r\n">, "did"=>"asdf"}
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 4640ms (Views: 0.4ms | ActiveRecord: 16.8ms)
+
+
+Started POST "/push/device" for 127.0.0.1 at 2017-12-14 01:11:03 +0900
+Processing by PushController#push_to_device as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fccb0f9dda8 @tempfile=#<Tempfile:/tmp/RackMultipart20171214-12308-14cnhd2.jpg>, @original_filename="Star-Guardian-Ezreal-by-UKIori-HD-4k-Wallpaper-Background-Fan-Art-Artwork-League-of-Legends-lol.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"Star-Guardian-Ezreal-by-UKIori-HD-4k-Wallpaper-Background-Fan-Art-Artwork-League-of-Legends-lol.jpg\"\r\nContent-Type: image/jpeg\r\n">, "did"=>"asdf"}
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`rasp_uuid` = 'asdf' LIMIT 1[0m
+Completed 200 OK in 4403ms (Views: 0.4ms | ActiveRecord: 13.2ms)
+
+
