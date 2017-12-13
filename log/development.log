@@ -936,3 +936,22 @@ Processing by PushController#push_to_rasp as */*
 Completed 200 OK in 1882ms (Views: 0.7ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (48.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (51.5ms)[0m  [1m[34mSELECT GET_LOCK(6778635641374256100, 0)[0m
+  [1m[35m (50.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateRasps (20171213072112)
+  [1m[35m (374.6ms)[0m  [1m[35mCREATE TABLE `rasps` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `rasp_id` varchar(255) DEFAULT '' NOT NULL, `rasp_ip` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (47.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (47.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171213072112')[0m
+  [1m[35m (53.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (45.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (57.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (87.7ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `value` = 'development', `updated_at` = '2017-12-13 07:23:56' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (50.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (55.1ms)[0m  [1m[34mSELECT RELEASE_LOCK(6778635641374256100)[0m
+  [1m[35m (43.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (46.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (67.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (75.7ms)[0m  [1m[32mINSERT INTO `rasps` (`rasp_id`, `rasp_ip`, `created_at`, `updated_at`) VALUES ('test123', '192.168.43.7', '2017-12-13 08:06:31', '2017-12-13 08:06:31')[0m
+  [1m[35m (69.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (67.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
