@@ -17,6 +17,8 @@ gem 'simple_token_authentication'
 gem 'firebase'
 gem 'fcm'
 gem 'httparty'
+gem 'fog-aws'
+gem 'carrierwave', '~> 1.0'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
