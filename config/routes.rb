@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   post '/push/device' => 'push#push_to_device'
   post '/push/rasp' => 'push#push_to_rasp'
   post '/regist' => 'push#check_rasp'
+  post '/change_ip' => 'users#change_ip'
+
   resources :users, only: [] do
     collection do
       post 'login', to: 'users#login'
