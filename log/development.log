@@ -930,3 +930,9 @@ Processing by PushController#push_to_rasp as */*
 Completed 200 OK in 1740ms (Views: 0.6ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/push/rasp" for 127.0.0.1 at 2017-12-13 15:37:40 +0900
+Processing by PushController#push_to_rasp as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x000055d3f5aae2d0 @tempfile=#<Tempfile:/tmp/RackMultipart20171213-18903-99gq4l.png>, @original_filename="test_cat.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.png\"\r\nContent-Type: image/png\r\n">}
+Completed 200 OK in 1882ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
