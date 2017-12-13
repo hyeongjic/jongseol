@@ -864,3 +864,69 @@ Completed 200 OK in 279ms (Views: 0.5ms | ActiveRecord: 0.0ms)
 
   [1m[35m (172.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[36mUser Load (122.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
+Started GET "/push/device" for 127.0.0.1 at 2017-12-13 15:29:01 +0900
+  [1m[35m (47.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (46.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/push/device"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/push/rasp" for 127.0.0.1 at 2017-12-13 15:30:46 +0900
+Processing by PushController#push_to_rasp as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f711430f4f8 @tempfile=#<Tempfile:/tmp/RackMultipart20171213-18903-v9n78l.png>, @original_filename="test_cat.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.png\"\r\nContent-Type: image/png\r\n">}
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `status' for #<NoMethodError:0x00007f710c0d0578>):
+  
+app/controllers/push_controller.rb:63:in `rescue in push_to_rasp'
+app/controllers/push_controller.rb:58:in `push_to_rasp'
+Started POST "/push/rasp" for 127.0.0.1 at 2017-12-13 15:31:17 +0900
+Processing by PushController#push_to_rasp as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f7114100040 @tempfile=#<Tempfile:/tmp/RackMultipart20171213-18903-1vgyusj.png>, @original_filename="test_cat.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.png\"\r\nContent-Type: image/png\r\n">}
+Completed 500 Internal Server Error in 121ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/push_controller.rb:65:in `push_to_rasp'
+Started POST "/push/rasp" for 127.0.0.1 at 2017-12-13 15:32:04 +0900
+Processing by PushController#push_to_rasp as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f710cecfe58 @tempfile=#<Tempfile:/tmp/RackMultipart20171213-18903-1dp593r.png>, @original_filename="test_cat.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.png\"\r\nContent-Type: image/png\r\n">}
+Completed 400 Bad Request in 81ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/push/rasp" for 127.0.0.1 at 2017-12-13 15:32:29 +0900
+Processing by PushController#push_to_rasp as */*
+  Parameters: {"signal"=>"d", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f71140af8c0 @tempfile=#<Tempfile:/tmp/RackMultipart20171213-18903-dstvy2.png>, @original_filename="test_cat.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test_cat.png\"\r\nContent-Type: image/png\r\n">}
+Completed 200 OK in 1740ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+

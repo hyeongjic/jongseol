@@ -8,7 +8,7 @@ class PushController < ApplicationController
   #server key jin=AAAAbe1dEHY:APA91bE4Kqr7l0BEoRANj9nRLB5_oH8izl5oR_nRZE1tFulE7VjRurtFqaHne7JcvGJI8RzNaTDp0UQpQCloVfN0CJN_HRx_byQRxO1hz9r4JyzrLJseAY_nGyC4ssn1IOqupVX3AfqI
 
 
-
+  #fcm push
   def push_to_device
     #signal = params['signal']
 
@@ -46,25 +46,28 @@ class PushController < ApplicationController
       # else
       #   render json: { result: 'wrong signal'}, status: 400
       # end
-
       response = fcm.send(registration_ids, options)
+
+      render json: { result: 'success'}, status: 200
     rescue => e
       render json: { result: 'fail', message: e.message }, status: e.status
     end
-      render json: { result: 'success'}, status: 200
   end
 
+  #test
   def push_to_rasp
     begin
       a = FileUploader.new
-      file = opne(params['file'])
+      file = open(params['file'])
       a.store!(file)
+      render json: { result: 'success'} ,status: 200
     rescue => e
-      render json: { result: 'faul',message: e.message},status: e.status
+      render json: { result: 'faul',message: e.message }, status: 400
     end
-    render json: { result: 'success'} ,status: 200
 
   end
+
+
 
 end
 
