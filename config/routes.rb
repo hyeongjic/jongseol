@@ -3,9 +3,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   #
   post '/push/device' => 'push#push_to_device'
-  post '/push/rasp' => 'push#push_to_rasp'
   post '/regist' => 'push#check_rasp'
-  post '/change_ip' => 'users#change_ip'
+  post '/change_ip' => 'push#change_ip'
 
   resources :users, only: [] do
     collection do

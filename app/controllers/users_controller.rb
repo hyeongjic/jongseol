@@ -2,18 +2,6 @@ class UsersController < ApplicationController
   acts_as_token_authentication_handler_for User, except: %i[create login]
   # skip_before_action :verify_authenticity_token
 
-  def change_ip
-    user = User.find_by_email(params['email'])
-    user_rasp = Rasp.find_by_rasp_id(user.rasp_uuid)
-
-    if !user_rasp.nil?
-      render json: { result: 'success', message: '변경에 성공했습니다.',
-                     ip: user_rasp.rasp_ip }
-    else
-      render json: { result: 'fail' , message: '맞는 디바이스가 존재하지 않습니다'}
-    end
-
-  end
   # login
   def login
     email = params['email']

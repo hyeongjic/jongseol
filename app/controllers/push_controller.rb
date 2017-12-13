@@ -55,9 +55,17 @@ class PushController < ApplicationController
     end
   end
 
-  #test
-  def push_to_rasp
-      render json: { result: 'success' }, status: 200
+  def change_ip
+    user = User.find_by_email(params['email'])
+    user_rasp = Rasp.find_by_rasp_id(user.rasp_uuid)
+    p user_rasp
+    if !user_rasp.nil?
+      render json: { result: 'success', message: '변경에 성공했습니다.',
+                     ip: user_rasp.rasp_ip }
+    else
+      render json: { result: 'fail' , message: '맞는 디바이스가 존재하지 않습니다'}
+    end
+
   end
 
   def check_rasp
