@@ -1,0 +1,160 @@
+  [1m[35m (39.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (45.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (42.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (42.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (68.4ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (54.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (56.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (44.1ms)[0m  [1m[31mDELETE FROM `users`[0m
+  [1m[36mFixture Insert (46.9ms)[0m  [1m[32mINSERT INTO `users` (`id`, `email`, `device_uuid`, `encrypted_password`, `authentication_token`, `created_at`, `updated_at`) VALUES (1, 'hhhh@hhh.net', 'asdfkasdfasdfkjsakdfhlasdf', 'adsfasdfasdf', 'adsfasdfasdf', '2017-12-13 20:10:52', '2017-12-13 20:10:52')[0m
+  [1m[36mFixture Delete (46.5ms)[0m  [1m[31mDELETE FROM `rasps`[0m
+  [1m[36mFixture Insert (50.6ms)[0m  [1m[32mINSERT INTO `rasps` (`created_at`, `updated_at`, `id`) VALUES ('2017-12-13 20:10:52', '2017-12-13 20:10:52', 980190962)[0m
+  [1m[36mFixture Insert (50.9ms)[0m  [1m[32mINSERT INTO `rasps` (`created_at`, `updated_at`, `id`) VALUES ('2017-12-13 20:10:52', '2017-12-13 20:10:52', 298486374)[0m
+  [1m[35m (59.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (47.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (39.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------
+UserTest: test_같은_email이_있는_경우
+------------------------------
+  [1m[36mUser Exists (47.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (34.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (51.8ms)[0m  [1m[35mBEGIN[0m
+-------------------------------
+UserTest: test_정상적으로_값이_들어가는_경우
+-------------------------------
+  [1m[36mUser Exists (43.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (46.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (43.6ms)[0m  [1m[35mBEGIN[0m
+-----------------------------
+UserTest: test_패스워드가_없는_경우_오류
+-----------------------------
+  [1m[36mUser Exists (48.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (75.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (39.7ms)[0m  [1m[35mBEGIN[0m
+-------------------------------
+UserTest: test_패스워드가_6글자_미안인_경우
+-------------------------------
+  [1m[36mUser Exists (42.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (47.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (44.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (67.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (79.7ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (57.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (46.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (38.2ms)[0m  [1m[31mDELETE FROM `users`[0m
+  [1m[36mFixture Insert (39.6ms)[0m  [1m[32mINSERT INTO `users` (`id`, `email`, `device_uuid`, `encrypted_password`, `authentication_token`, `created_at`, `updated_at`) VALUES (1, 'hhhh@hhh.net', 'asdfkasdfasdfkjsakdfhlasdf', 'adsfasdfasdf', 'adsfasdfasdf', '2017-12-13 20:11:17', '2017-12-13 20:11:17')[0m
+  [1m[36mFixture Delete (47.9ms)[0m  [1m[31mDELETE FROM `rasps`[0m
+  [1m[36mFixture Insert (44.7ms)[0m  [1m[32mINSERT INTO `rasps` (`created_at`, `updated_at`, `id`) VALUES ('2017-12-13 20:11:17', '2017-12-13 20:11:17', 980190962)[0m
+  [1m[36mFixture Insert (58.6ms)[0m  [1m[32mINSERT INTO `rasps` (`created_at`, `updated_at`, `id`) VALUES ('2017-12-13 20:11:17', '2017-12-13 20:11:17', 298486374)[0m
+  [1m[35m (58.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (70.4ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (81.7ms)[0m  [1m[35mBEGIN[0m
+-----------------------------
+UserTest: test_패스워드가_없는_경우_오류
+-----------------------------
+  [1m[36mUser Exists (57.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (56.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (51.5ms)[0m  [1m[35mBEGIN[0m
+-------------------------------
+UserTest: test_정상적으로_값이_들어가는_경우
+-------------------------------
+  [1m[36mUser Exists (49.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (39.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (55.6ms)[0m  [1m[35mBEGIN[0m
+-------------------------------
+UserTest: test_패스워드가_6글자_미안인_경우
+-------------------------------
+  [1m[36mUser Exists (44.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (50.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (60.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------
+UserTest: test_같은_email이_있는_경우
+------------------------------
+  [1m[36mUser Exists (46.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (67.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (46.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (48.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (47.5ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (43.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (46.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (49.1ms)[0m  [1m[31mDELETE FROM `users`[0m
+  [1m[36mFixture Insert (50.1ms)[0m  [1m[32mINSERT INTO `users` (`id`, `email`, `device_uuid`, `encrypted_password`, `authentication_token`, `created_at`, `updated_at`) VALUES (1, 'hhhh@hhh.net', 'asdfkasdfasdfkjsakdfhlasdf', 'adsfasdfasdf', 'adsfasdfasdf', '2017-12-13 20:11:43', '2017-12-13 20:11:43')[0m
+  [1m[36mFixture Delete (46.0ms)[0m  [1m[31mDELETE FROM `rasps`[0m
+  [1m[36mFixture Insert (48.0ms)[0m  [1m[32mINSERT INTO `rasps` (`created_at`, `updated_at`, `id`) VALUES ('2017-12-13 20:11:44', '2017-12-13 20:11:44', 980190962)[0m
+  [1m[36mFixture Insert (50.7ms)[0m  [1m[32mINSERT INTO `rasps` (`created_at`, `updated_at`, `id`) VALUES ('2017-12-13 20:11:44', '2017-12-13 20:11:44', 298486374)[0m
+  [1m[35m (50.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (55.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (43.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------
+UserTest: test_같은_email이_있는_경우
+------------------------------
+  [1m[35m (52.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (61.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (45.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` WHERE `users`.`authentication_token` = 'dBVssbxax7zyQ8V7Q_Ca'[0m
+  [1m[35mSQL (47.6ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `device_uuid`, `rasp_uuid`, `created_at`, `updated_at`, `authentication_token`) VALUES ('name@email.com', '$2a$04$NUQhDhaYvl.D37WQKKkCbeojX6qTHyvns1HEzquK6NeWWkzQkWztm', 'token', 'rasp', '2017-12-13 20:11:44', '2017-12-13 20:11:44', 'dBVssbxax7zyQ8V7Q_Ca')[0m
+  [1m[35m (38.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (66.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (58.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (82.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (65.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (63.5ms)[0m  [1m[35mBEGIN[0m
+-----------------------------
+UserTest: test_패스워드가_없는_경우_오류
+-----------------------------
+  [1m[36mUser Exists (65.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (45.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (53.8ms)[0m  [1m[35mBEGIN[0m
+-------------------------------
+UserTest: test_패스워드가_6글자_미안인_경우
+-------------------------------
+  [1m[36mUser Exists (40.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (49.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (47.4ms)[0m  [1m[35mBEGIN[0m
+-------------------------------
+UserTest: test_정상적으로_값이_들어가는_경우
+-------------------------------
+  [1m[36mUser Exists (47.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (46.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (54.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (42.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (53.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (40.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (44.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (47.5ms)[0m  [1m[31mDELETE FROM `users`[0m
+  [1m[36mFixture Insert (47.4ms)[0m  [1m[32mINSERT INTO `users` (`id`, `email`, `device_uuid`, `encrypted_password`, `authentication_token`, `created_at`, `updated_at`) VALUES (1, 'hhhh@hhh.net', 'asdfkasdfasdfkjsakdfhlasdf', 'adsfasdfasdf', 'adsfasdfasdf', '2017-12-13 20:12:01', '2017-12-13 20:12:01')[0m
+  [1m[36mFixture Delete (51.2ms)[0m  [1m[31mDELETE FROM `rasps`[0m
+  [1m[36mFixture Insert (47.1ms)[0m  [1m[32mINSERT INTO `rasps` (`created_at`, `updated_at`, `id`) VALUES ('2017-12-13 20:12:01', '2017-12-13 20:12:01', 980190962)[0m
+  [1m[36mFixture Insert (47.7ms)[0m  [1m[32mINSERT INTO `rasps` (`created_at`, `updated_at`, `id`) VALUES ('2017-12-13 20:12:01', '2017-12-13 20:12:01', 298486374)[0m
+  [1m[35m (55.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (55.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (58.6ms)[0m  [1m[35mBEGIN[0m
+------------------------------
+UserTest: test_같은_email이_있는_경우
+------------------------------
+  [1m[35m (40.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (49.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (44.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` WHERE `users`.`authentication_token` = '8kqwvDQsM3Hn5wVg1b-c'[0m
+  [1m[35mSQL (48.0ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `device_uuid`, `rasp_uuid`, `created_at`, `updated_at`, `authentication_token`) VALUES ('name@email.com', '$2a$04$H6cWSSCAQjShmDj4O5zg8OKnQWvRgfBBCekSNeanpEBKKDh0Es27G', 'token', 'rasp', '2017-12-13 20:12:02', '2017-12-13 20:12:02', '8kqwvDQsM3Hn5wVg1b-c')[0m
+  [1m[35m (46.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (45.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (44.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (51.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (69.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (42.8ms)[0m  [1m[35mBEGIN[0m
+-----------------------------
+UserTest: test_패스워드가_없는_경우_오류
+-----------------------------
+  [1m[36mUser Exists (38.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (45.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (31.9ms)[0m  [1m[35mBEGIN[0m
+-------------------------------
+UserTest: test_패스워드가_6글자_미안인_경우
+-------------------------------
+  [1m[36mUser Exists (48.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (62.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (48.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------
+UserTest: test_정상적으로_값이_들어가는_경우
+-------------------------------
+  [1m[36mUser Exists (43.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'name@email.com' LIMIT 1[0m
+  [1m[35m (47.2ms)[0m  [1m[31mROLLBACK[0m

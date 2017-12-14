@@ -30,8 +30,6 @@ class PushController < ApplicationController
         a.store!(file)
         pic_url = "https://s3.ap-northeast-2.amazonaws.com/jongseol-test/uploads/nil_class/"
         pic_url += a.filename
-        p a.filename
-        p pic_url
       else
         render json: { result: 'wrong signal'}, status: 400
       end
@@ -46,7 +44,7 @@ class PushController < ApplicationController
               pic:  pic_url
           }
       }
-
+      sleep 1
       response = fcm.send(registration_ids, options)
 
       render json: { result: 'success' }, status: 200
