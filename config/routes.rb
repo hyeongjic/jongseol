@@ -1,18 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  #
-  post '/push/device' => 'push#push_to_device'
-  post '/regist' => 'push#check_rasp'
-  post '/change_ip' => 'push#change_ip'
+
+  post '/push/device' => 'push#push_to_device' #push메세지
+  post '/regist' => 'push#check_rasp' #라즈베리파이 등록
 
   resources :users, only: [] do
     collection do
-      post 'login', to: 'users#login'
-      post 'sign_up', to: 'users#create'
+      post 'login', to: 'users#login' #로그인
+      post 'sign_up', to: 'users#create' #회원가입
     end
   end
-
-
 
 end

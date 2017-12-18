@@ -1,20 +1,15 @@
 require 'fcm'
 class PushController < ApplicationController
-  #acts_as_token_authentication_handler_for User
-  #api key = AIzaSyBVcFWK0978HD9vh4WxjmTKrZxcnTQh0W0
-  #server key = AAAAtSbtkSc:APA91bHr7lu2SUB9FpxcLHmjd9zlJkWWWDBjs9pnI_6RXGy_nhekKHGKjj0avSQuLr8lUrGG4tCkrLgi9q-n7qma-zRed7WRyUeA74DG6CHCXlSsClJl8jnGjMoJItj5Tht2d-xBmdoe
-  #server key2 = AIzaSyA0yO5SvQAY3XWGZ0ywV3qEvC53yqkEbus
-  #project id = jongseol-3e94c
-  #server key jin=AAAAbe1dEHY:APA91bE4Kqr7l0BEoRANj9nRLB5_oH8izl5oR_nRZE1tFulE7VjRurtFqaHne7JcvGJI8RzNaTDp0UQpQCloVfN0CJN_HRx_byQRxO1hz9r4JyzrLJseAY_nGyC4ssn1IOqupVX3AfqI
 
-
-  #fcm push
+  # fcm push
+  # 라즈베리파이에서 post 방식으로 요청을 보내면
+  # 안드로이드 어플로 push 알람을 보낸다.
+  # 라즈베리파이가 a를 보내면 침입탐지 푸쉬를
+  # d를 보내면 창문에 있는 거수자의 사진을 받아
+  # 아마존의 s3에 보낸뒤 URL을 푸쉬에 담아서 보낸다
   def push_to_device
     begin
-      #fcm = FCM.new("AAAAbe1dEHY:APA91bE4Kqr7l0BEoRANj9nRLB5_oH8izl5oR_nRZE1tFulE7VjRurtFqaHne7JcvGJI8RzNaTDp0UQpQCloVfN0CJN_HRx_byQRxO1hz9r4JyzrLJseAY_nGyC4ssn1IOqupVX3AfqI")
       fcm = FCM.new("AAAAtSbtkSc:APA91bHr7lu2SUB9FpxcLHmjd9zlJkWWWDBjs9pnI_6RXGy_nhekKHGKjj0avSQuLr8lUrGG4tCkrLgi9q-n7qma-zRed7WRyUeA74DG6CHCXlSsClJl8jnGjMoJItj5Tht2d-xBmdoe")
-      #registration_ids = ["e1tqz0AuzwI:APA91bE1tGnOUQIBZux20BJzbRw4PRX3LHmT14cIDuCGyVKEk2BrZ51HgfTMqrgx38GNsIZB7AIdSkzPsjwOyMqSqcOCt0Z3-qHwH9iQizvC7USqXg43b5M1gTzvP2Bb_ueo4dR8sI2k"]
-      #registration_ids = ["cGy4rVKmBEY:APA91bHJDsVQryGYFILnMjRftgxxmUel1yfchwbj1ABQDFICyGPYt2TOny_UFj0BOLmMHL3p43EQtDOK_1GwShfdkJ837u10sZQq2os8LvUXTIhmVic4oOkHAXokeVrt_eCWovvau9"]
       registration_ids = [User.find_by_rasp_uuid(params['did']).device_uuid]
       signal = params['signal']
 
@@ -53,19 +48,12 @@ class PushController < ApplicationController
     end
   end
 
-  def change_ip
-    user = User.find_by_email(params['email'])
-    user_rasp = Rasp.find_by_rasp_id(user.rasp_uuid)
-    p user_rasp
-    if !user_rasp.nil?
-      render json: { result: 'success', message: '변경에 성공했습니다.',
-                     ip: user_rasp.rasp_ip }
-    else
-      render json: { result: 'fail' , message: '맞는 디바이스가 존재하지 않습니다'}
-    end
 
-  end
-
+  # 라즈베리파이가 처음 켜질때 post 방식으로
+  # 자신의 일련번호와 등록된 아이피를 보낸다
+  # 만약 서버 db에 자신의 일련번호가 없을 시에
+  # 서버에 등록을 하고 아이피를 입력한다.
+  # 만약 서버에 등록되어있다면 바뀐 아이피만 입력해서 저장한다
   def check_rasp
     begin
       # key value  did/ ip

@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
   acts_as_token_authentication_handler_for User, except: %i[create login]
-  # skip_before_action :verify_authenticity_token
 
   # login
+  # 등록된 유저인지 아닌지 확인하는 코드
+  # device 젬을 이용해서 만들었다.
   def login
     email = params['email']
     password = params['password']
@@ -24,6 +25,11 @@ class UsersController < ApplicationController
   end
 
   # sign_up
+  # 회원가입을 하는 코드
+  # 안드로이드로부터 이메일, 비밀번호, 비밀번호확인,
+  # 라즈베리파이 일련번호를 입력받아 db에 저장한다.
+  # 추가로 push메세지를 받기 위해 고유의 토큰값을
+  # 서버로 보내 같이 db에 저장한다
   def create
     email = params['email']
     encrypted_password = params['encrypted_password']
